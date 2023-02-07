@@ -23,7 +23,7 @@
   </section>
   
   {{-- new arrivals --}}
-  <x-section>
+  <x-section class=" ">
     <x-slot name="title">
       New Arrivals
     </x-slot>
@@ -48,7 +48,7 @@
   <x-masonry />
 
   {{-- popular items --}}
-  <x-section>
+  <x-section class=" ">
     <x-slot name="title">
       Popular Product
     </x-slot>
