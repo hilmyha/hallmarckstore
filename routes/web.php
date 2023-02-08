@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\DashboardCategoryController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DashboardProductContoller;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -22,3 +24,9 @@ Route::get('/products/{product:slug}', [ProductController::class, 'show']);
 
 // dashboard
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
+
+// route handling product
+Route::resource('/dashboard/products', DashboardProductContoller::class)->middleware('auth');
+
+// route handling category
+Route::resource('/dashboard/categories', DashboardCategoryController::class)->middleware('auth');

@@ -17,6 +17,7 @@
             <x-slot name="name">username</x-slot>
             <x-slot name="type">username</x-slot>
             <x-slot name="placeholder">Your username</x-slot>
+            <x-slot name="old">{{ old('username') }}</x-slot>
           </x-partials.input>
   
           <x-partials.input name="input">
@@ -24,6 +25,7 @@
             <x-slot name="name">password</x-slot>
               <x-slot name="type">password</x-slot>
               <x-slot name="placeholder">Password</x-slot>
+              <x-slot name="old">{{ old('password') }}</x-slot>
           </x-partials.input>
   
   

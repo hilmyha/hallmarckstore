@@ -16,6 +16,7 @@
             <x-slot name="name">username</x-slot>
             <x-slot name="type">text</x-slot>
             <x-slot name="placeholder">Your Username</x-slot>
+            <x-slot name="old">{{ old('username') }}</x-slot>
           </x-partials.input>
 
           <x-partials.input name="input">
@@ -23,6 +24,7 @@
             <x-slot name="name">name</x-slot>
             <x-slot name="type">text</x-slot>
             <x-slot name="placeholder">Your Name</x-slot>
+            <x-slot name="old">{{ old('name') }}</x-slot>
           </x-partials.input>
           
           <x-partials.input name="input">
@@ -30,6 +32,7 @@
             <x-slot name="name">email</x-slot>
             <x-slot name="type">email</x-slot>
             <x-slot name="placeholder">somebody@email.com</x-slot>
+            <x-slot name="old">{{ old('email') }}</x-slot>
           </x-partials.input>
 
           <x-partials.input name="input">
@@ -37,6 +40,7 @@
             <x-slot name="name">password</x-slot>
             <x-slot name="type">password</x-slot>
             <x-slot name="placeholder">Password</x-slot>
+            <x-slot name="old">{{ old('password') }}</x-slot>
           </x-partials.input>
           
           <x-partials.input name="input">
@@ -44,6 +48,7 @@
             <x-slot name="name">password_confirmation</x-slot>
             <x-slot name="type">password</x-slot>
             <x-slot name="placeholder">Confirm Password</x-slot>
+            <x-slot name="old">{{ old('password') }}</x-slot>
           </x-partials.input>
 
 

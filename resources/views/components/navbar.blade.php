@@ -1,6 +1,6 @@
 {{-- navbar --}}
 <header class="bg-white px-2 mobile:px-4 py-4 fixed w-full z-20 top-0 left-0 border-b shadow-lg border-gray-200">
-  <div class="container flex flex-wrap items-center justify-between border">
+  <div class="container flex flex-wrap items-center justify-between">
     <a href="/">
       <span class="self-center text-xl font-semibold whitespace-nowrap">
         {{ $title }}
@@ -12,7 +12,7 @@
       @auth
         <button id="dropdownInformationButton" data-dropdown-toggle="dropdownInformation" class="font-medium text-sm px-4 py-2.5 text-center md:inline-flex hidden items-center" type="button"> {{ auth()->user()->name }} <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
         
-        <button id="dropdownInformationButton" data-dropdown-toggle="dropdownInformation" class="md:hidden p-2.5 mx-2 text-center inline-flex items-center border rounded-full"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg></button>
+        <button id="dropdownInformationButton" data-dropdown-toggle="dropdownInformation" class="md:hidden p-2.5 mx-2 text-center inline-flex items-center rounded-full"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg></button>
 
         <!-- Dropdown menu -->
         <div id="dropdownInformation" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg border shadow w-44">

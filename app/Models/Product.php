@@ -21,4 +21,14 @@ class Product extends Model
     {
         return $this->belongsTo(User::class, 'user_id');
     }
+
+    public function orders()
+    {
+        return $this->belongsTo(Order::class);
+    }
+
+    public function charts()
+    {
+        return $this->hasMany(Chart::class);
+    }
 }
