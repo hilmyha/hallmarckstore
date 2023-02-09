@@ -10,7 +10,7 @@
         <a href="/dashboard/products/create" class="mt-2 text-primary-500 lg:hover:underline">Add Product</a>
         
       </div>
-      <div class=" overflow-x-scroll">
+      <div class="overflow-x-scroll">
         <table class="table-auto w-full text-sm text-left text-gray-500 border">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                 <tr>

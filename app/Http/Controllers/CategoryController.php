@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
+use App\Models\Product;
 
 class CategoryController extends Controller
 {
@@ -15,7 +16,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.categories.index', [
+            'categories' => Category::with('products')->get(),
+        ]);
     }
 
     /**
@@ -45,9 +48,12 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Category $category)
+    public function show(Category $category, Product $product)
     {
-        //
+        return view('pages.categories.show', [
+            'products' => $category->products,
+            'category' => $category->products,
+        ]);
     }
 
     /**
