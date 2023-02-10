@@ -6,6 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Hallmarck™ | {{ $title }}</title>
 
+  <!-- @TODO: replace SET_YOUR_CLIENT_KEY_HERE with your client key -->
+  <script type="text/javascript"
+  src="https://app.sandbox.midtrans.com/snap/snap.js"
+  data-client-key="{{ config('midtrans.client_key') }}"></script>
+  <!-- Note: replace with src="https://app.midtrans.com/snap/snap.js" for Production environment -->
   {{-- font --}}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +32,7 @@
   <x-dashboardfoot title="Hallmarck" />
 
 
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="https://kit.fontawesome.com/8807866152.js" crossorigin="anonymous"></script>
   @vite('node_modules/flowbite/dist/flowbite.js')

@@ -42,7 +42,12 @@
           @endif
         @endforeach
       </x-partials.input-select>
-  
+      
+      <div class="input-group">
+        <label class="block mb-2 text-sm font-medium text-gray-900" for="iamge">Upload file</label>
+        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50" aria-describedby="iamge_help" id="iamge" type="file" name="image">
+      </div>
+
       <x-partials.input name="input">
         <x-slot name="label">Description</x-slot>
         <x-slot name="name">description</x-slot>
@@ -53,4 +58,15 @@
   
     </x-dashboard-form>
   </div>
+  <script>
+    const name = document.querySelector('#name')
+    const slug = document.querySelector('#slug')
+    name.addEventListener('change', function() {
+      fetch('/dashboard/products/checkSlug?name=' + name.value)
+        .then(response => response.json())
+        .then(data => slug.value = data.slug)
+    })
+
+    console.log(name.value);
+  </script>
 </x-dashboard-layout>

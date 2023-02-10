@@ -1,6 +1,6 @@
 <div class="bg-white lg:border-none border lg:shadow-none shadow-lg group w-full">
 	<div class="relative overflow-hidden h-[450px] bg-gray-200">
-		<img class="object-cover" src="{{ asset('assets/img/test1.png') }}" alt="" />
+		<img class="object-cover" src="{{ asset('storage/' . $product->image) }}" alt="" />
 		<div class="absolute inset-0 group-hover:bg-black/30 transition duration-300"></div>
 	</div>
 	

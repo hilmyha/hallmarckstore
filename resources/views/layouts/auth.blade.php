@@ -29,6 +29,7 @@
   
 
 
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="https://kit.fontawesome.com/8807866152.js" crossorigin="anonymous"></script>
   @vite('node_modules/flowbite/dist/flowbite.js')

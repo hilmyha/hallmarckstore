@@ -1,7 +1,7 @@
 <x-app-layout title="Categories">
   <x-hero>
     <x-slot name="title">
-      
+      Category in {{ $category }}
     </x-slot>
     <x-slot name="desc">
       

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Product;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
 
 class DashboardProductContoller extends Controller
@@ -47,14 +48,16 @@ class DashboardProductContoller extends Controller
             'description' => 'required',
             'price' => 'required',
             'category_id' => 'required',
+            'image' => 'image|file',
         ]);
 
-        // if ($request->file('image')) {
-        //     $validatedData['image'] = $request->file('image')->store('images');
-        // }
+        if ($request->file('image')) {
+            $validatedData['image'] = $request->file('image')->store('images');
+        }
 
         $validatedData['user_id'] = auth()->user()->id;
-
+        
+        
         Product::create($validatedData);
 
         return redirect('/dashboard/products')->with('success', 'Post has been added');
@@ -111,9 +114,9 @@ class DashboardProductContoller extends Controller
 
         $validatedData = $request->validate($rules);
 
-        // if ($request->file('image')) {
-        //     $validatedData['image'] = $request->file('image')->store('images');
-        // }
+        if ($request->file('image')) {
+            $validatedData['image'] = $request->file('image')->store('images');
+        }
 
         $validatedData['user_id'] = auth()->user()->id;
 
@@ -133,5 +136,12 @@ class DashboardProductContoller extends Controller
         Product::destroy($product->id);
 
         return redirect('/dashboard/products')->with('success', 'Post has been deleted');
+    }
+
+    // check slug
+    public function checkSlug(Request $request)
+    {
+        $slug = SlugService::createSlug(Product::class, 'slug', $request->name);
+        return response()->json(['slug' => $slug]);
     }
 }

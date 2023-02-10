@@ -36,12 +36,5 @@
 
   </div>
 
-  <script>
-    const slug = document.querySelector('#slug')
-    title.addEventListener('change', function() {
-      fetch('/dashboard/wisata/checkSlug?title=' + title.value)
-        .then(response => response.json())
-        .then(data => slug.value = data.slug)
-    })
-  </script>
+  
 </x-dashboard-layout>

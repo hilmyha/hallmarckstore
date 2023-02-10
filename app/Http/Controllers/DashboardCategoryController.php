@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
 
 class DashboardCategoryController extends Controller
@@ -107,5 +108,12 @@ class DashboardCategoryController extends Controller
         Category::destroy($category->id);
 
         return redirect('/dashboard/categories')->with('success', 'Category has been deleted');
+    }
+
+    // check slug
+    public function checkSlug(Request $request)
+    {
+        $slug = SlugService::createSlug(Product::class, 'slug', $request->name);
+        return response()->json(['slug' => $slug]);
     }
 }

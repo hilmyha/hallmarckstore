@@ -24,7 +24,7 @@
               <a href="/dashboard" class="block px-4 py-2 hover:bg-gray-100">Dashboard</a>
             </li>
             <li>
-              <a href="/cart" class="block px-4 py-2 hover:bg-gray-100">Carts</a>
+              <a href="/dashboard/cart" class="block px-4 py-2 hover:bg-gray-100">Carts</a>
             </li>
           </ul>
           <div class="py-2">

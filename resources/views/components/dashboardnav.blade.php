@@ -58,10 +58,10 @@
           </button>
           <ul id="dropdown-example" class="hidden py-2 space-y-2">
                 <li>
-                    <a href="#" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100">Products</a>
+                    <a href="/dashboard/cart" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100">Cart</a>
                 </li>
                 <li>
-                    <a href="#" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100">Billing</a>
+                    <a href="/dashboard/orders" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100">Checkout</a>
                 </li>
                 <li>
                     <a href="#" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100">Invoice</a>

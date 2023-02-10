@@ -52,7 +52,7 @@ class CategoryController extends Controller
     {
         return view('pages.categories.show', [
             'products' => $category->products,
-            'category' => $category->products,
+            'category' => $category->name,
         ]);
     }
 
